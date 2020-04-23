@@ -14,7 +14,17 @@
 
             gtag('js', new Date());
 
-            gtag('config', 'UA-143061791-2');
+            const gtag_id = 'UA-143061791-2';
+            gtag('config', gtag_id);
+
+
+            function readSource(e) {
+                gtag('event', 'read_source', {
+                    'event_category': 'research',
+                    'event_label': e.currentTarget.href,
+                    'value': 1
+                })
+            }
         </script>
 
         <title>Magic: The Gathering Traditional Format</title>
@@ -55,10 +65,19 @@
 
             }
         </style>
-        <meta property="og:url" content="https://traditionalmtg.github.io" />
-        <meta property="og:title" content="Magic: The Gathering Traditional Format" />
-        <meta property="og:description" content="Traditional is a Modern-based format that prides itself in creating a fairer feel for the game and the
-                way it's played out, while encouraging the brewing of new archetypes to combat existing ones." />
+        <meta
+                property="og:url"
+                content="https://traditionalmtg.github.io"
+        />
+        <meta
+                property="og:title"
+                content="Magic: The Gathering Traditional Format"
+        />
+        <meta
+                property="og:description"
+                content="Traditional is a Modern-based format that prides itself in creating a fairer feel for the game and the
+                way it's played out, while encouraging the brewing of new archetypes to combat existing ones."
+        />
     </head>
     <body>
         <header>
@@ -209,6 +228,8 @@
                 <ol>
                     <li id="1">
                         <a
+                                target="_blank"
+                                onclick="readSource(event)"
                                 href="https://magic.wizards.com/en/articles/archive/making-magic/year-living-changerously-2008-06-02"
                         >
                             https://magic.wizards.com/en/articles/archive/making-magic/year-living-changerously-2008-06-02
@@ -216,6 +237,8 @@
                     </li>
                     <li id="2">
                         <a
+                                target="_blank"
+                                onclick="readSource(event)"
                                 href="https://web.archive.org/web/20200421180612/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lr0o/"
                         >
                             https://web.archive.org/web/20200421180612/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lr0o/
@@ -223,6 +246,8 @@
                     </li>
                     <li id="3">
                         <a
+                                target="_blank"
+                                onclick="readSource(event)"
                                 href="https://web.archive.org/web/20200422100035/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lz9f/"
                         >
                             https://web.archive.org/web/20200422100035/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lz9f/
@@ -232,7 +257,7 @@
             </section>
         </main>
 
-        <footer> 
+        <footer>
         </footer>
     </body>
 </html>
