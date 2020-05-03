@@ -1,6 +1,9 @@
 <html lang="en">
     <head>
-        <meta name="google-site-verification" content="DSkvfNRnVtP_-OSYici8LowVHx6eSXHpqDraK-yrQJA" />
+        <meta
+                name="google-site-verification"
+                content="DSkvfNRnVtP_-OSYici8LowVHx6eSXHpqDraK-yrQJA"
+        />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script
                 async
@@ -17,55 +20,10 @@
 
             const gtag_id = 'UA-143061791-2';
             gtag('config', gtag_id);
-
-
-            function readSource(e) {
-                gtag('event', 'read_source', {
-                    'event_category': 'research',
-                    'event_label': e.currentTarget.href,
-                    'value': 1
-                })
-            }
         </script>
 
         <title>Magic: The Gathering Traditional Format</title>
-        <style>
-            span.italic {
-                font-style: italic;
-            }
-
-            main, header, footer {
-                max-width: 600px;
-                width: 100%;
-            }
-
-            html {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgb(238, 242, 255);
-            }
-
-            .wrap-links {
-
-                /* These are technically the same, but use both */
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-
-                -ms-word-break: break-all;
-                /* This is the dangerous one in WebKit, as it breaks things wherever */
-                word-break: break-all;
-                /* Instead use this non-standard one: */
-                word-break: break-word;
-
-                /* Adds a hyphen where the word breaks, if supported (No Blink) */
-                -ms-hyphens: auto;
-                -moz-hyphens: auto;
-                -webkit-hyphens: auto;
-                hyphens: auto;
-
-            }
-        </style>
+        <link href="common.css" rel="stylesheet"/>
         <meta
                 property="og:url"
                 content="https://traditionalmtg.github.io"
@@ -90,7 +48,11 @@
                 way it's played out, while encouraging the brewing of new archetypes to combat existing ones.
                 <br>
                 Traditional MTG Discord:
-                <a href="https://discordapp.com/invite/DGBwDRq">https://discordapp.com/invite/DGBwDRq</a>
+                <a
+                        target="_blank"
+                        href="https://discordapp.com/invite/DGBwDRq"
+                >https://discordapp.com/invite/DGBwDRq
+                </a>
             </p>
         </header>
 
@@ -135,7 +97,10 @@
                 </h2>
                 <p>
                     The following is a Modern ban list that Traditional is based on:
-                    <a href="https://scryfall.com/search?as=grid&order=name&q=banned%3Amodern">
+                    <a
+                            target="_blank"
+                            href="https://scryfall.com/search?as=grid&order=name&q=banned%3Amodern"
+                    >
                         https://scryfall.com/search?as=grid&order=name&q=banned%3Amodern
                     </a>
                 </p>
@@ -148,8 +113,19 @@
                 <p>
                     Effectively most things you would play in Modern, with the aforementioned bans. Please refer to this
                     list:
-                    <a href="https://scryfall.com/search?q=f%3Amodern+-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards">
+                    <a
+                            target="_blank"
+                            href="https://scryfall.com/search?q=f%3Amodern+-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards"
+                    >
                         https://scryfall.com/search?q=f%3Amodern+-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards
+                    </a>
+                </p>
+            </section>
+            <section>
+                <h2>News</h2>
+                <p>
+                    <a href="dong.html">
+                        2020-05-03 - Tournament #2: Expand Dong
                     </a>
                 </p>
             </section>
@@ -230,7 +206,6 @@
                     <li id="1">
                         <a
                                 target="_blank"
-                                onclick="readSource(event)"
                                 href="https://magic.wizards.com/en/articles/archive/making-magic/year-living-changerously-2008-06-02"
                         >
                             https://magic.wizards.com/en/articles/archive/making-magic/year-living-changerously-2008-06-02
@@ -239,7 +214,6 @@
                     <li id="2">
                         <a
                                 target="_blank"
-                                onclick="readSource(event)"
                                 href="https://web.archive.org/web/20200421180612/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lr0o/"
                         >
                             https://web.archive.org/web/20200421180612/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lr0o/
@@ -248,7 +222,6 @@
                     <li id="3">
                         <a
                                 target="_blank"
-                                onclick="readSource(event)"
                                 href="https://web.archive.org/web/20200422100035/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lz9f/"
                         >
                             https://web.archive.org/web/20200422100035/https://old.reddit.com/r/IAmA/comments/20f1dn/we_are_richard_garfield_creator_of_magic_the/cg2lz9f/
@@ -260,5 +233,12 @@
 
         <footer>
         </footer>
+        <script src="common.js"></script>
+        <script>
+            Array.from(
+                document.querySelectorAll("ol>li>a")
+            )
+                .forEach(attachClickListener(readSource));
+        </script>
     </body>
 </html>
