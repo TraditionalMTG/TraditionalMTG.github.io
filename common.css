@@ -2,6 +2,14 @@ span.italic {
     font-style: italic;
 }
 
+span.bold {
+    font-weight: bold;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
 main, header, footer {
     max-width: 600px;
     width: 100%;
