@@ -43,6 +43,6 @@ function attachClickListener(listener) {
         }
         clicked = true;
     }
-    window.addEventListener('scroll', onscrollFunc);
+    window.addEventListener('scroll', onscrollFunc, {passive: true});
     window.addEventListener('click', onclickFunc);
 })()
