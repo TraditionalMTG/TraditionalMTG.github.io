@@ -19,3 +19,30 @@ function attachClickListener(listener) {
         it.addEventListener('click', listener)
     }
 }
+
+(function(){
+    let scrolled = false;
+    let clicked = false;
+    function onscrollFunc(e) {
+        if(scrolled === false && e.isTrusted === false) {
+            gtag('event', 'fake_tracker', {
+                'event_category': 'fakes',
+                'event_label': 'fake user',
+                'value': 1
+            });
+        }
+        scrolled = true;
+    }
+    function onclickFunc(e) {
+        if(clicked === false && e.isTrusted === false) {
+            gtag('event', 'fake_tracker', {
+                'event_category': 'fakes',
+                'event_label': 'fake user',
+                'value': 1
+            });
+        }
+        clicked = true;
+    }
+    window.addEventListener('scroll', onscrollFunc);
+    window.addEventListener('click', onclickFunc);
+})()
