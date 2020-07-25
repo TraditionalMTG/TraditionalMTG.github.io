@@ -22,7 +22,7 @@
             gtag('config', gtag_id);
         </script>
 
-        <title>Magic: The Gathering Traditional Format</title>
+        <title>Magic: The Gathering Traditional Modifier</title>
         <link href="common.css" rel="stylesheet"/>
         <meta
                 property="og:url"
@@ -30,11 +30,11 @@
         />
         <meta
                 property="og:title"
-                content="Magic: The Gathering Traditional Format"
+                content="Magic: The Gathering Traditional Modifier"
         />
         <meta
                 property="og:description"
-                content="Traditional is a Modern-based format that prides itself in creating a fairer feel for the game and the
+                content="Traditional is a deckbuilding rule modifier that prides itself in creating a fairer feel for the game and the
                 way it's played out, while encouraging the brewing of new archetypes to combat existing ones."
         />
     </head>
@@ -44,7 +44,7 @@
                 Traditional Format
             </h1>
             <p>
-                Traditional is a Modern-based format that prides itself in creating a fairer feel for the game and the
+                Traditional is a deckbuilding rule modifier that prides itself in creating a fairer feel for the game and the
                 way it's played out, while encouraging the brewing of new archetypes to combat existing ones.
                 <br>
                 Traditional MTG Discord:
@@ -62,8 +62,8 @@
                     Rules
                 </h2>
                 <p>
-                    Traditional is a format based on Modern; the regular Modern ban list still applies, with several
-                    additions to it:
+                    Traditional is a deckbuilding rule modifier, much like penny dreadful. Traditional imposes the
+                    following deckbuilding restrictions:
                 </p>
                 <ul>
                     <li>
@@ -95,7 +95,7 @@
                 <h2>
                     Banned Cards
                 </h2>
-                <p>
+                <p class="strike-out">
                     The following is a Modern ban list that Traditional is based on:
                     <a
                             target="_blank"
@@ -104,6 +104,9 @@
                         https://scryfall.com/search?as=grid&order=name&q=banned%3Amodern
                     </a>
                 </p>
+                <p>
+                    Since this is a modifier, you can pick your own base card set and then apply the Traditional restrictions.
+                </p>
             </section>
 
             <section>
@@ -111,18 +114,23 @@
                     Legal Cards
                 </h2>
                 <p>
-                    Effectively most things you would play in Modern, with the aforementioned bans. Please refer to this
+                    Effectively most things you would play, with the aforementioned bans. Please refer to this
                     list:
                     <a
                             target="_blank"
-                            href="https://scryfall.com/search?q=f%3Amodern+-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards"
+                            href="https://scryfall.com/search?q=-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards"
                     >
-                        https://scryfall.com/search?q=f%3Amodern+-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards
+                        https://scryfall.com/search?q=-r%3Amythic+-t%3Aplaneswalker&order=set&as=grid&unique=cards
                     </a>
                 </p>
             </section>
             <section>
                 <h2>News (<a href="archive.html">Archive</a>)</h2>
+                <p>
+                    <a href="birr.html">
+                        2020-07-26 - Tournament #14: Ethiopian BIRRRR
+                    </a>
+                </p>
                 <p>
                     <a href="pound.html">
                         2020-06-21 - Tournament #9: Scottish Pound Sterling
@@ -141,11 +149,6 @@
                 <p>
                     <a href="witness.html">
                         2020-05-30 - Tournament #6: Enter the Witness
-                    </a>
-                </p>
-                <p>
-                    <a href="kroon.html">
-                        2020-05-24 - Tournament #5: ESTONIAN KROON
                     </a>
                 </p>
             </section>
@@ -194,6 +197,10 @@
                     </p>
                     <p>
                         We are considering the possibility of running our own ban list after the format gains traction.
+                    </p>
+                    <p>
+                        Starting with <a href="birr.html">Ethiopian BIRRRR</a> we've started experimenting with banlists
+                        and more deckbuilding rules, thanks to <a href="https://gitlab.com/Dragas/eternal-witness">Eternal Witness</a>.
                     </p>
                 </section>
 
